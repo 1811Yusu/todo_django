@@ -14,12 +14,12 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from todo_app.views import get_todos, create_todo
+from django.urls import path, include
+
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('todos/', get_todos),
-    path('create_todo/', create_todo)
+    path('api/v1/', include('todo_app.urls'))
 ]
+# http://localhost:8000/api/v1/update-todo/2/
