@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     'rest_framework',
 
+    'drf_yasg',
+
     'todo_app',
 ]
 
